@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity: Water</title>
+  <!-- Link to the CSS file for styling -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Add your HTML here -->
+  <!-- Navigation bar at the top of the page -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <!-- Use the logo image from the img folder -->
+      <img src="img/logo.png" alt="charity: water logo" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <!-- Navigation links -->
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">DONATE</a></li>
+          <li><a href="#">WHO WE HELP</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Donate button moved outside nav-links for right alignment -->
+    <a class="donate-btn" href="#">DONATE</a>
+  </header>
+
+  <!-- Hero section with main message and image -->
+  <section class="hero">
+    <div class="hero-text">
+      <!-- Main headline split for two colors -->
+      <h1>Give Water.</h1>
+      <span class="see-change">See Change.</span>
+      <!-- Short description -->
+      <p>Join a global community bringing clean water to those in need. Track your donation and see real stories from the people you help.</p>
+      <!-- Call-to-action button -->
+      <a href="#" class="cta-button">JOIN THE DRIP</a>
+    </div>
+    <!-- Removed the hero-image <img> because the image will be a background in CSS -->
+  </section>
+
 </body>
 </html>

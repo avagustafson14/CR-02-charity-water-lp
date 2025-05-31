@@ -1,0 +1,213 @@
+/* charity: water Brand Colors & Fonts
+
+Primary Colors:
+- Yellow:     #FFC907
+- Blue:       #2E9DF7
+
+Secondary Colors:
+- Light Blue: #8BD1CB
+- Green:      #4FCB53
+- Orange:     #FF902A
+- Red:        #F5402C
+- Dark Green: #159A48
+- Pink:       #F16061
+
+Fonts:
+- Proxima Nova
+- Avenir
+
+*/
+
+/* Reset some default styles and set up the font */
+body, html {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  /* Always use Proxima Nova or Avenir for all text */
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  color: #333; /* Set default text color */
+  background-color: #fff; /* Set background color */
+}
+
+/* Make sure all text uses Proxima Nova or Avenir */
+* {
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+}
+
+/* Remove underline from links and use default text color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo+links left, donate button right */
+  align-items: center;
+  padding: 20px 40px; /* Make navbar less tall by removing top and bottom padding */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+}
+
+/* Container for logo and nav links */
+.navbar-left {
+  display: flex; /* Place logo and nav links in a row */
+  align-items: center;
+  width: 100%; /* Take full width to help align nav links */
+  justify-content: space-between; /* Space between logo and nav links */
+}
+
+/* Logo image style */
+.logo {
+  height: 40px; /* Make the logo image shorter to crop more top and bottom */
+  margin-right: 40px;
+  object-fit: cover; /* Crop the image if it doesn't fit the box */
+  object-position: center; /* Center the cropped area */
+  width: 250px; /* Keep width the same */
+  /* You can adjust width as needed for your logo shape */
+}
+
+/* Navigation links style */
+.nav-links {
+  list-style: none; /* Remove bullets */
+  display: flex; /* Arrange links in a row */
+  gap: 20px; /* Space between links */
+  align-items: center; /* Center links vertically */
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end; /* Move nav links to the right */
+}
+
+/* Style for each link */
+.nav-links li a {
+  font-size: 1em;
+  padding: 8px 12px; /* Add space around links */
+  transition: background 0.3s ease; /* Smooth background change */
+  position: relative; /* Needed for underline effect */
+}
+
+/* Always show the down arrow after each nav link */
+.nav-links li a::after {
+  content: " ▼"; /* Down facing arrow */
+  font-size: 1em;
+}
+
+/* Add yellow underline on hover for nav links */
+.nav-links li a:hover {
+  /* No changes needed here */
+}
+
+/* Add the yellow underline using a pseudo-element */
+.nav-links li a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 8px; /* Align with link padding */
+  right: 8px;
+  bottom: 2px; /* Place just below the text */
+  height: 3px; /* Thickness of the underline */
+  background: #FFC907; /* Yellow color */
+  border-radius: 2px;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s;
+}
+
+/* Show the underline on hover */
+.nav-links li a:hover::before {
+  opacity: 1;
+}
+
+/* Special style for the donate button link */
+.donate-btn {
+  background-color: #FFC907; /* Yellow background */
+  color: #000; /* Black text */
+  font-weight: bold;
+  border-radius: 6px; /* Rounded corners */
+  margin-left: 40px;
+  padding: 12px 32px;
+  font-size: 1.1em;
+  transition: background 0.3s; /* Smooth color change on hover */
+}
+
+/* Change donate button to a darker yellow on hover */
+.donate-btn:hover {
+  background-color: #e6b800; /* Darker yellow */
+}
+
+/* Hero section styles */
+.hero {
+  /* Make sure the left side of the image is not cropped and move image up slightly */
+  background-image: url('img/heroimg.jpg');
+  background-size: cover; /* Always fill left and right sides */
+  background-position: right 15%; /* Move image up a bit more */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  min-height: 800px; /* Keep the same height to keep the bottom in place */
+}
+
+/* Place hero text above the overlay */
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+  z-index: 1; /* Make sure text is above the overlay */
+  margin-top: 20px;   /* Move all hero text higher up */
+  margin-left: 40px;  /* Move text slightly to the right */
+}
+
+/* Hero headline */
+.hero-text h1 {
+  font-size: 3em; /* Large text */
+  margin-top: -300px; /* Move h1 up */
+  margin-bottom: 0px; /* No space below h1 */
+  color: #FFF7E1; /* Give Water. is light yellow */
+}
+
+/* Style for the "See Change." line */
+.see-change {
+  color: #fff; /* See Change. is white */
+  display: block; /* Show on a new line */
+  font-size: 3em; /* Match h1 size */
+  margin-top: 0px; /* Small space above */
+  margin-bottom: 10px; /* Space below */
+  line-height: 1.5; /* Space between lines */
+  font-weight: bold; /* Make text bold */
+}
+
+/* Hero description */
+.hero-text p {
+  font-size: 1.2em;
+  margin-top: -200px; /* Move p up */
+  margin-bottom: 10px; /* Less space below p */
+  text-align: left; /* Move text to the right */
+  /* Move the paragraph to the right side */
+  position: relative; /* Needed for left property */
+  left: 600px; /* Move p to the right (adjust value as needed) */
+  color: #fff; /* See change is white */
+  line-height: 1.5; /* Increase spacing between lines */
+}
+
+/* Call-to-action button */
+.cta-button {
+  background-color: #FFC907; /* Yellow background */
+  color: #003366; /* Blue text color */
+  padding: 12px 20px; /* Make button taller by increasing top and bottom padding */
+  border-radius: 6px; /* Rounded corners */
+  font-weight: bold;
+  display: inline-block; /* Allow button to fit its content horizontally */
+  margin-top: 5px; /* Move button up so it sits right under the paragraph */
+  margin-left: 600px; /* Align button with the paragraph */
+  text-align: center; /* Center the button text */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  transition: background 0.3s; /* Smooth color change on hover */
+}
+
+/* Change CTA button to a darker yellow on hover */
+.cta-button:hover {
+  background-color: #e6b800; /* Darker yellow */
+}
